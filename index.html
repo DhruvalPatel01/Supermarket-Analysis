@@ -1,1 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NHS Capacity Utilisation</title>
+  <style>
+    /* Base styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000; /* default text black */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
+    /* Push footer to bottom */
+    main {
+      flex-grow: 1;
+    }
+
+    /* Header box */
+    .header-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #3600ff;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .header-container h1 {
+      font-size: 2rem;
+      margin: 0 0 12px 0;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .header-container p {
+      font-size: 1rem;
+      font-style: italic;
+      margin: 0;
+    }
+
+    /* Section heading */
+    .section-heading {
+      color: black;
+      font-size: 1.5rem;
+      margin: 40px 0 20px 280px; /* desktop left indent */
+      text-align: left;
+    }
+
+    /* List styling */
+    .link-list {
+      margin-left: 300px; /* desktop left indent */
+      font-size: 1rem;
+      color: black;
+      list-style-type: disc;
+      padding-left: 20px; /* bullet indent */
+    }
+
+    .link-list li {
+      margin-bottom: 10px;
+      font-weight: bold;  /* bold by default */
+    }
+
+    /* Override for lists where you don't want bold */
+    .link-list.no-bold li {
+      font-weight: normal;
+    }
+
+    .link-list a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    .link-list a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer bar */
+    .footer-bar {
+      background-color: #3600ff; /* same color as header */
+      height: 13.33px; /* one-third of 40px padding top (approx) */
+      min-height: 40px; /* keep minimum height for clickable area */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .footer-bar a {
+      color: white;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .footer-bar a:hover {
+      text-decoration: underline;
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 600px) {
+      .header-container {
+        padding: 30px 15px;
+      }
+
+      .header-container h1 {
+        font-size: 1.5rem;
+      }
+
+      .header-container p {
+        font-size: 0.9rem;
+      }
+
+      .section-heading {
+        margin-left: 20px !important;
+        font-size: 1.3rem !important;
+      }
+
+      .link-list {
+        margin-left: 30px !important;
+        font-size: 0.95rem;
+        padding-left: 20px !important;
+      }
+
+      .link-list li {
+        margin-bottom: 8px;
+      }
+
+      /* Make sure override also works on mobile */
+      .link-list.no-bold li {
+        font-weight: normal;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-container">
+    <h1>2Market Demographic & Marketing Analysis</h1>
+    <p>This project explores purchasing patterns and customer demographics for a global supermarket, 2Market. The effectiveness of different marketing channels are also determined to influence recommendations on future campaigns.</p>
+  </div>
+
+  <main>
+    <h2 class="section-heading">📄 Final Results</h2>
+
+    <ul class="link-list">
+      <li><a href="https://dhruvalpatel01.github.io/Supermarket-Analysis" target="_blank" rel="noopener noreferrer">Full Report (PDF)</a></li>
+      <li><a href="https://public.tableau.com/app/profile/dhruval.patel5840/viz/2Market_Customer_Analysis/DemographicAnalysis?publish=yes" target="_blank" rel="noopener noreferrer">Tableau Dashboard</a></li>
+    </ul>
+
+    <h2 class="section-heading">📊 Key Visualisations</h2>
+
+    <p style="margin-left: 300px; font-size: 1rem; color: black;">
+      Total Monthly Appointments and Service Utilisation
+    </p>
+
+    <img src="Vis-1.jpg" alt="Total Monthly Appointments and Service Utilisation" 
+       style="display: block; margin-left: 300px; max-width: 600px; width: 100%; height: auto; border: 1px solid #ccc; margin-bottom: 30px;" />
+
+    <p style="margin-left: 300px; font-size: 1rem; color: black;">
+    Count of Appointments Across Different Seasons
+    </p>
+
+    <img src="Vis-2.jpg" alt="Count of Appointments Across Different Seasons" 
+       style="display: block; margin-left: 300px; max-width: 600px; width: 100%; height: auto; border: 1px solid #ccc;" />
+
+    <p style="margin-left: 300px; font-size: 1rem; color: black;">
+    Attendance of Appointments
+    </p>
+
+    <img src="Vis-3.jpg" alt="Attendance of Appointments" 
+       style="display: block; margin-left: 300px; max-width: 600px; width: 100%; height: auto; border: 1px solid #ccc;" />
+
+    <p style="margin-left: 300px; font-size: 1rem; color: black;">
+    Trending Healthcare Hashtags (Excluding #Healthcare, #Medical, #Medicine)
+    </p>
+
+    <img src="Vis-4.jpg" alt="Trending Healthcare Hashtags" 
+       style="display: block; margin-left: 300px; max-width: 600px; width: 100%; height: auto; border: 1px solid #ccc;" />
+
+    <h2 class="section-heading">📌 Summary of Insights</h2>
+
+    <ul class="link-list no-bold">
+      <li>Monthly service utilisation consistently exceeded 80% capacity.</li>
+      <li>90% of appointments were attended when booked.</li>
+      <li>The total number of appointments fall during winter months.</li>
+      <li>Public sentiment focus on AI, Jobs and Digital Health presented by Twitter data.</li>
+    </ul>
+
+    <h2 class="section-heading">📢 Recommendations</h2>
+
+    <ul class="link-list no-bold">
+      <li>Implement measures for permanent and temporary staff to buffer peak periods.</li>
+      <li>Use automated SMS/app reminders to remind patients of bookings and reduce no-shows.</li>
+      <li>Redistribute staff members during periods of fewer appointments to even out the service.</li>
+      <li>Develop tools for remote consultations, symptom-checking apps, and digital triage to reduce burden on NHS facilities.</li>
+    </ul>
+  </main>
+
+  <footer class="footer-bar">
+    <a href="https://dhruvalpatel01.github.io/Dhruval-Data-Analysis/" target="_self" rel="noopener noreferrer">
+      &larr; Back To Portfolio
+    </a>
+  </footer>
+
+</body>
+</html>
